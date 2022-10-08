@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view user page</title>
+
+    <link rel="icon" type="image/svg+xml" href="https://example.com/image.svg">
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet"> 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    {{!-- font-awesome --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    body
+    {
+    padding: 0% 8%;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/006/482/638/large_2x/colored-abstract-high-quality-gradient-mesh-professional-blurred-background-picture-perfect-for-any-size-project-online-or-even-in-print-free-photo.jpg");
+    }
+        #form-back
+    {
+    padding: 13px 30px;
+    background-color: #3f9dff;
+    color: #ffffff;
+    border: 1px solid #3f9dff;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    }
+    #form-back:hover
+    {
+    color: #ffffff;
+    background-color: #3f9cffc2;
+    border: 1px solid #3f9cffc2;
+    }
+
+
+    </style>
+    
+</head>
+<body>
+    {{>adminheader}}
+    <br>
+    <h1 id="form-heading" style="font-weight: 500; text-align:center; font-size: 70px; color:#110f0fe5;"> View / Update User Page</h1> 
+    <table class="table table-striped"><br><br><br>
+
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>User Email</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Password</th>
+            <th>Confirm Password</th>
+
+        </tr>
+    </thead>
+    {{#each listx}}
+        <tr>
+            <td>{{this.userfirstname}}</td>
+            <td>{{this.userlastname}}</td>
+            <td>{{this.useremail}}</td>
+            <td>{{this.userphone}}</td>
+            <td>{{this.usergender}}</td>
+            <td>{{this.userage}}</td>
+            <td>{{this.userpassword}}</td>
+            <td>{{this.userconfirmpassword}}</td>
+            <td>
+                <a href="/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<br><br><br>
+<a href="/" id="form-back" style="cursor:pointer">Back</a>
+
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>

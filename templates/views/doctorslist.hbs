@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ {{>links}}
+</head>
+<body>
+  <div id="container">
+   {{>header}}
+
+    <!-- d-banner-start -->
+     <div id="d-banner">
+        <img src="docimages/bradcam3.png" alt="">
+        <h1>Doctors</h1>
+     </div>
+      <!-- d-banner-end -->
+
+    {{>doctorarea}}
+      
+      <!-- hotline-start -->
+      <div id="hotline">
+        <div id="hotline-sub">
+            <p id="hotline-p1">Emergency hotline</p>
+        <h3>(+91) – 256 567 550</h3>
+        <p id="hotline-p2">We provide 24/7 customer support.<br>Please feel free to contact us
+            for emergency case.</p>
+        </div>    
+      </div>
+      <!-- hotline-end -->
+
+       {{>footer}}
+
+  <!-- javascript-->
+  <script src="js/script.js"></script>
+</body>
+</html>

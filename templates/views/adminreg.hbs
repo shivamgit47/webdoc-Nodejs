@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/regstyle.css">
+        <style>
+        body
+    {
+        background-image: url('https://images.unsplash.com/photo-1573883430697-4c3479aae6b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+         background-repeat: no-repeat;
+         background-size: cover;
+    }
+        .container 
+    {
+        margin-top: 10%;
+    }
+        </style>
+    </head>
+
+
+    <body>
+
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left" >
+                    <img src="https://png2.cleanpng.com/sh/3f3355466a594243d51395a593b56ef2/L0KzQYm3VcA5N5JvfZH0aYP2gLBuTfxieKV0iJ9sb33zhcXskr1qa5Dzi59Ac3X1PcH5jBdzaZ5yfeQ2NXHpQbLpUsZkaZc6Tqg3NkG0RYS9WcUyPWM6T6oCNEOzSIS4U75xdpg=/kisspng-laptop-computer-icons-user-programmer-5af1ab26caf566.6115369515257874308313.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>To Admin Registration</p>
+                    <br/>
+                    <a href="/adminlogin"><input type="submit" name="" value="Login"/></a>
+                </div>
+                <div class="col-md-9 register-right" >
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="/adminreg" role="tab" aria-controls="home" aria-selected="true">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="/adminlogin" role="tab" aria-controls="profile" aria-selected="false">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Enter details for new admin</h3>
+                            <form action="/adminreg" method="POST">
+                                <div class="row register-form">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Admin Name *" value="" name="adminname" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Admin Email *" value="" name="adminemail" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Admin Password *" value="" name="adminpassword"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control"  placeholder="Confirm Admin Password *" value="" name="adminconfirmpassword" />
+                                        </div>
+
+                                        <div class="form-group">   
+                                            <input type="submit" class="btnRegister"  value="Register"/>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                    
+                                
+    
+
+        <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity = "sha384-KJ302DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity = "sha384-ApNbgh98+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin = "anonymous"></script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity = "sha384-JZR6Spejh4U02d8j0t6vLEHfe/JQGiRRSQQxSfFWpilMquVdAyjUar5+76PVCmY1"
+        crossorigin = "anonymous"></script>
+    </body>
+</html>

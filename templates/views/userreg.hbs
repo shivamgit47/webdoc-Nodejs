@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Registration Page</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/regstyle.css">
+    </head>
+    
+    <style>
+        body
+    {
+        background-image: url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+         background-repeat: no-repeat;
+         background-size: cover;
+    }
+    .container 
+    {
+        margin-top: 10%;
+    }
+    </style>
+
+    <body>
+
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left" >
+                    <img src="https://png2.cleanpng.com/sh/3f3355466a594243d51395a593b56ef2/L0KzQYm3VcA5N5JvfZH0aYP2gLBuTfxieKV0iJ9sb33zhcXskr1qa5Dzi59Ac3X1PcH5jBdzaZ5yfeQ2NXHpQbLpUsZkaZc6Tqg3NkG0RYS9WcUyPWM6T6oCNEOzSIS4U75xdpg=/kisspng-laptop-computer-icons-user-programmer-5af1ab26caf566.6115369515257874308313.png" alt=""/>
+                    <h3>Welcome</h3>
+                    <p>To New User Registration</p>
+                    <br/>
+                    <a href="/adminlogin"><input type="submit" name="" value="Login"/></a>
+                </div>
+                <div class="col-md-9 register-right" >
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="/userreg" role="tab" aria-controls="home" aria-selected="true">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="/userlogin" role="tab" aria-controls="profile" aria-selected="false">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Enter details for new user</h3>
+                            <form action="/userreg" method="POST">
+                                <div class="row register-form">
+                                    <input type="hidden" name="_id" value="{{listx._id}}">
+                                    <div class="col-md-6">
+                                        
+                                       <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *" value="{{listx.userfirstname}}" name="userfirstname" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email *" value="{{listx.useremail}}" name="useremail" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="tel" minlength="10" maxlength="10" name="userphone" class="form-control" placeholder="Your Phone *" value="{{listx.userphone}}" />
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" value="{{listx.userpassword}}" name="userpassword"/>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" value="{{listx.userlastname}}" name="userlastname"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="usergender" value="male" checked>
+                                                    <span> Male </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="usergender" value="female">
+                                                    <span>Female </span> 
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control"  placeholder="Enter Your Age *" value="{{listx.userage}}" name="userage"/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control"  placeholder="Confirm Password *" value="{{listx.userconfirmpassword}}" name="userconfirmpassword" />
+                                        </div>
+                                        <div>
+                                            <input type="submit" class="btnRegister"  value="Register"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                    
+                                
+    
+
+        <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity = "sha384-KJ302DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity = "sha384-ApNbgh98+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin = "anonymous"></script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity = "sha384-JZR6Spejh4U02d8j0t6vLEHfe/JQGiRRSQQxSfFWpilMquVdAyjUar5+76PVCmY1"
+        crossorigin = "anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create medic cart</title>
+
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet"> 
+    
+    <style>
+body
+{
+    padding: 0% 8%;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+        /* add-medic-page-start */
+
+#form-heading
+{
+text-align: center;
+font-size: 40px;
+font-weight: 500;
+}
+form
+{
+    margin-top:5%;
+    padding: 30px 30px;
+    background-color: rgba(255, 239, 239, 0.664);
+}
+.form-group
+{
+    padding: 20px 50px;
+    font-size: 30px;
+}
+#form-name,#form-price,#form-discount,#form-img
+{
+    padding: 7px 0;
+    padding-right: 200px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#form-submit
+{
+    padding: 13px 30px;
+    background-color: green;
+    color: #ffffff;
+    border: 1px solid green;
+    border-radius: 15px;
+    font-size: 20px;
+}
+#form-submit:hover
+{
+    
+    color: #ffffff;
+    background-color: rgba(6, 211, 6, 0.747);
+    border: 1px solid rgba(6, 211, 6, 0.747);
+}
+#form-reset
+{
+    padding: 13px 30px;
+    background-color: red;
+    color: #ffffff;
+    border: 1px solid red;
+    border-radius: 15px;
+    font-size: 20px;
+}
+#form-reset:hover
+{
+    color: #ffffff;
+    background-color: rgba(212, 46, 46, 0.733);
+    border: 1px solid rgba(212, 46, 46, 0.733);
+}
+#form-back
+{
+    padding: 13px 30px;
+    background-color: #3f9dff;
+    color: #ffffff;
+    border: 1px solid #3f9dff;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+#form-back:hover
+{
+    color: #ffffff;
+    background-color: #3f9cffc2;
+    border: 1px solid #3f9cffc2;
+}
+/* add-medic-page-end */
+    </style>
+</head>
+<body>
+    {{>adminheader}}
+    <div id="createmedicshop">
+        <h1 id="form-heading" style="font-weight: 500; text-align:center; font-size: 70px; color:#ffffffe5;">{{viewtitle}}Create Medicine Cart</h1>    
+
+        <h3"style=color:#ffffffe5;">{{viewtitle}}New Cart</h3> 
+        <form action="/createmedicshop" method="POST" autocomplete="" enctype="multipart/form-data">
+        {{!-- <input type="hidden" name="_id" value="{{listx._id}}"> --}}
+            <div class="form-group">
+                <label for="form-name">Medicine Name</label><br>
+                <input type="text" id="form-name" placeholder="Enter Medicine Name" value="" name="medicname">
+            </div>
+
+            <div class="form-group">
+                <label for="form-img">Medicine Image</label><br>
+                <input type="file" id="form-img" placeholder="Select image" value="" name="medicimage">
+            </div>
+            <div class="form-group">
+                <label for="form-price">Medicine Price</label><br>
+                <input type="number" id="form-price" placeholder="Enter price" value=""name="medicprice">
+            </div>
+            <div class="form-group">
+                <label for="form-discount">Medicine Discount</label><br>
+                <input type="number" id="form-discount" placeholder="Enter discount" value=""name="medicdiscount">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="upload cart" id="form-submit" style="cursor:pointer">
+                <input type="reset" value="cancel" id="form-reset" style="cursor:pointer">
+                <a href="/" id="form-back" style="cursor:pointer">Back</a>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

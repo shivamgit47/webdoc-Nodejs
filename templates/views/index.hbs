@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>links}}
+</head>
+<body>
+    
+  <div id="container">
+    {{>header}}
+
+    <!-- sliding-banner-start -->
+    <div id="sliding-banner">
+      <div class="slide">
+        <img src="docimages/banner3.png" alt="">
+        <div id="caption"><h3 id="b-heading1"><span>Health Care</span></h3>
+        <h3 id="b-heading2">For Whole Family</h3>
+        <p id="b-heading3">In healthcare sector, service excellence is the facility of <br> the hospital as
+        healthcare service provider to consistently.</p>
+        <div class="b-btn">
+          <a href="department.html">View Department</a>
+          <a id="b-btn-2" href="">Make an Appointment</a>
+        </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="docimages/banner2.png" alt="">
+        <div id="caption"><h3 id="b-heading1"><span>Health Care</span></h3>
+        <h3 id="b-heading2">For Whole Family</h3>
+        <p id="b-heading3">In healthcare sector, service excellence is the facility of <br> the hospital as
+        healthcare service provider to consistently.</p>
+        <div class="b-btn">
+          <a href="">View Department</a>
+          <a id="b-btn-2" href="">Make an Appointment</a>
+        </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="docimages/banner1.png" alt="">
+        <div id="caption"><h3 id="b-heading1"><span>Health Care</span></h3>
+        <h3 id="b-heading2">For Whole Family</h3>
+        <p id="b-heading3">In healthcare sector, service excellence is the facility of <br> the hospital as
+        healthcare service provider to consistently.</p>
+        <div class="b-btn">
+          <a href="">View Department</a>
+          <a id="b-btn-2" href="">Make an Appointment</a>
+        </div>
+        </div>
+      </div>
+      <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+      <span class="arrow next" onclick="controller(1)">&#10095;</span>
+    </div>   
+    <!-- sliding-banner-start -->
+
+    <!-- service-area-start -->
+    <div id="service" class="uni-padding">
+      <div class="service-section33">
+        <h1>Hospitality</h1>
+        <p>Clinical excellence must be the priority<br>for any health care service provider.</p>
+        <div class="service-btn"><a href="">Apply For a Bed</a></div>
+      </div>
+      <div class="service-section33 service-section33-1">
+        <h1>Emergency Care</h1>
+        <p>Clinical excellence must be the priority<br>for any health care service provider.</p>
+        <div class="service-btn"><a href="">+91 123 456 7890</a></div>
+      </div>
+      <div class="service-section33">
+        <h1>Chamber Service</h1>
+        <p>Clinical excellence must be the priority<br>for any health care service provider.</p>
+        <div class="service-btn"><a href="">Make an Appointment</a></div>
+      </div>
+    </div>
+    <!-- service-area-end -->
+
+    <!-- welcome/about-medlife-start -->
+    <div id="about-area" class="uni-padding">
+      <div class="about-section50" id="about-image">
+        <img id="about-img1" src="docimages/about2.png" alt="">
+        <img id="about-img2" src="docimages/about1.png" alt="">
+      </div>
+      <div class="about-section50">
+        <h5 id="about-text-h5">Welcome To Medlife</h5>
+        <h3 id="about-text-h3">Best Care For Your<br>
+          Good Health</h3>
+        <p id="about-text-p">Esteem spirit temper too say adieus who direct esteem.<br> It esteems luckily or picture placing drawing. Apartments<br> frequently or motionless on reasonable projecting<br> expression.</p>
+        <ul id="about-text-ul">
+          <li> <i class="bi bi-caret-right-fill"></i> Apartments frequently or motionless. </li>
+          <li> <i class="bi bi-caret-right-fill"></i> Duis aute irure dolor in reprehenderit in voluptate.</li>
+          <li> <i class="bi bi-caret-right-fill"></i> Voluptatem quia voluptas sit aspernatur. </li>  
+      </div>
+    </div>
+    <!-- welcome/about-medlife-end -->
+
+    {{>departmentarea}}
+
+    <!-- ad-area-start -->
+    <div id="ad-area">
+      <div class="ad-area-div" id="ad-area-div1">
+        <p>FUN FACTS</p>
+        <h3>Over 5,100 patients<br>trust us</h3>
+        <a href="">Make an appointment</a>
+      </div>
+      <div class="ad-area-div" id="ad-area-div2">
+        <div class="ad-area-divdata">
+          <h3>30</h3>
+          <p>Years of Experienced</p>
+        </div>
+        <div class="ad-area-divdata">
+          <h3>4,500</h3>
+          <p>Happy Patients</p>
+        </div>
+        <div class="ad-area-divdata">
+          <h3>84</h3>
+          <p>Number of Doctors</p>
+        </div>
+        <div class="ad-area-divdata">
+          <h3>300</h3>
+          <p>Number of Staffs</p>
+        </div>
+      </div>
+    </div>
+    <!-- ad-area-end -->
+
+    {{>doctorarea}}
+
+    {{>footer}}
+  <!-- javascript-->
+  <script src="js/script.js"></script>
+</body>
+</html>

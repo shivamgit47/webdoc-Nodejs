@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Appointment Page</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/regstyle.css">
+    </head>
+    <style>
+        body
+    {
+        background-image: url('https://images.unsplash.com/photo-1633259584604-afdc243122ea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRhcmslMjBibHVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+         background-repeat: no-repeat;
+         background-size: cover;
+    }
+    .container 
+    {
+        margin-top: 5%;
+    }
+    #showbtn 
+    {
+        padding: 10px 40px;
+        color: aliceblue;
+        background-color: #06488f;
+        margin-top: 20px;
+        border: 2px solid #06488f;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    #showbtndiv
+    {
+        margin-top: 4.8rem;
+    }
+    </style>
+
+    <body>
+
+        <div class="container register">
+            <div class="row">
+                
+                <div class="col-md-9 register-right" >
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="/userreg" role="tab" aria-controls="home" aria-selected="true">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="/userlogin" role="tab" aria-controls="profile" aria-selected="false">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Enter details for Appointment</h3>
+                            <form action="/appointment" method="POST">
+                                <div class="row register-form">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Patient Name *" value="" name="patientname" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <select class="form-control" name="centername">
+                                                <option class="hidden"  selected disabled>Please select location for appointment<center></center></option>
+                                                <option value="Yamuna Vihar">Yamuna Vihar</option>
+                                                <option value="Ghaziabad">Ghaziabad</option>
+                                                <option value="Ashok Nagar">Ashok Nagar</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <select class="form-control" name="doctorname">
+                                                <option class="hidden"  selected disabled>Please select  Doctor</option>
+                                                <option value="Dr. Susheela Devi">Dr. Susheela Devi</option>
+                                                <option value="Dr. Shalendra">Dr. Shalendra</option>
+                                                <option value="Dr. Aarti Sharma">Dr. Aarti Sharma</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <select class="form-control" name="departname">
+                                                <option class="hidden"  selected disabled>Please select  Department</option>
+                                                <option value="Eye Care">Eye Care</option>
+                                                <option value="Physical Therapy">Physical Therapy</option>
+                                                <option value="Dental Care">Dental Care</option>
+                                                <option value="Diagnostic Test">Diagnostic Test</option>
+                                                <option value="Skin Surgery">Skin Surgery</option>
+                                                <option value="Surgery Service">Surgery Service</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" value="" name="apptdate" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="please describe your sypmtoms *" value="" name="sympname" />
+                                        </div>
+
+                                        <div class="form-group">   
+                                            <input type="submit" class="btnRegister"  value="Register"/>
+                                        </div> 
+
+                                        <div class="form-group" id="showbtndiv">   
+                                            <a id="showbtn" href="/showappointment">show appointment</a>
+                                        </div> 
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                    
+                                
+    
+
+        <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity = "sha384-KJ302DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin = "anonymous"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity = "sha384-ApNbgh98+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin = "anonymous"></script>
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity = "sha384-JZR6Spejh4U02d8j0t6vLEHfe/JQGiRRSQQxSfFWpilMquVdAyjUar5+76PVCmY1"
+        crossorigin = "anonymous"></script>
+    </body>
+</html>
